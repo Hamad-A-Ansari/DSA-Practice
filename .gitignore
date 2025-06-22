@@ -1,0 +1,24 @@
+# C++ compiled files
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+
+# Editor and OS-specific files
+.vscode/
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Windows-specific junk files
+Thumbs.db
+desktop.ini
+
+# Mac-specific junk (in case you share across OS)
+.DS_Store

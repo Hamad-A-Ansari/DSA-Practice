@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-
+using namespace std;
 /**
  * Definition for singly-linked list.
  *
@@ -15,24 +15,30 @@ public:
      };
 
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-      ListNode* finAns = new ListNode();
-      finAns->next = head;
-      ListNode* it = head;
+        ListNode* dummy = new ListNode(0, head);
+        ListNode* fast = dummy;
+        ListNode* slow = dummy;
 
-      int m = 0;
-      
-      while(it !=nullptr){
-        m++;
-        it = it->next;
-      }
+        // Move fast n+1 steps ahead
+        for (int i = 0; i <= n; i++) {
+            fast = fast->next;
+        }
 
+        // Move both until fast reaches the end
+        while (fast != nullptr) {
+            fast = fast->next;
+            slow = slow->next;
+        }
 
+        // Delete the target node
+        ListNode* toDelete = slow->next;
+        slow->next = slow->next->next;
+        delete toDelete;
 
-
-      
-
-
-
-      return finAns->next;
+        ListNode* newHead = dummy->next;
+        delete dummy;
+        return newHead;
     }
+
+
 };

@@ -20,7 +20,7 @@ public:
         ListNode* curr = dummy;
 
         while (curr->next != nullptr) {
-            if (curr->next->val == x) {
+            if (curr->next->val == val) {
                 ListNode* temp = curr->next;
                 curr->next = curr->next->next;
                 delete temp;

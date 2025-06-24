@@ -8,42 +8,42 @@ struct ListNode {
   ListNode(int x, ListNode *next): val(x), next(next) {}
 };
 
-ListNode* addTwoNumbers (ListNode* l1, ListNode* l2){
-  ListNode *curr1 = l1;
-  ListNode *curr2 = l2;
+// ListNode* addTwoNumbers (ListNode* l1, ListNode* l2){
+//   ListNode *curr1 = l1;
+//   ListNode *curr2 = l2;
 
-  string sl1 = "";
-  string sl2 = "";
+//   string sl1 = "";
+//   string sl2 = "";
 
-  while(curr1 != nullptr){
-    sl1+= to_string(curr1->val);
-    curr1 = curr1->next;
-  }
+//   while(curr1 != nullptr){
+//     sl1+= to_string(curr1->val);
+//     curr1 = curr1->next;
+//   }
 
-  while(curr2 != nullptr){
-    sl2+= to_string(curr2->val);
-    curr2 = curr2->next;
-  }
+//   while(curr2 != nullptr){
+//     sl2+= to_string(curr2->val);
+//     curr2 = curr2->next;
+//   }
 
-  reverse(sl1.begin(), sl1.end());
-  reverse(sl2.begin(), sl2.end());
+//   reverse(sl1.begin(), sl1.end());
+//   reverse(sl2.begin(), sl2.end());
 
-  long long num1 = stoll(sl1);
-  long long num2 = stoll(sl2);
-  long long sum = num1 + num2;
+//   long long num1 = stoll(sl1);
+//   long long num2 = stoll(sl2);
+//   long long sum = num1 + num2;
 
-  string ans = to_string(sum);
+//   string ans = to_string(sum);
 
-  ListNode* output = new ListNode(ans[ans.size() - 1] - '0');
-  ListNode* head = output;
-  for(int i = ans.size() - 1; i >= 0; i--){
-    head->next = new ListNode(ans[i] - '0');
-    head = head->next;
-  }
+//   ListNode* output = new ListNode(ans[ans.size() - 1] - '0');
+//   ListNode* head = output;
+//   for(int i = ans.size() - 1; i >= 0; i--){
+//     head->next = new ListNode(ans[i] - '0');
+//     head = head->next;
+//   }
 
-  ListNode* finH = output->next;
-  return finH;
-}
+//   ListNode* finH = output->next;
+//   return finH;
+// }
 
 // Works for Smaller numbers - Brute Force
 

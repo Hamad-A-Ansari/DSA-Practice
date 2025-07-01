@@ -43,6 +43,7 @@ int32_t main() {
         }
     }
 
+    
     int steps = posLargest + ((inp.size() - 1) - posSmallest);
     if (posLargest > posSmallest) steps--;
 

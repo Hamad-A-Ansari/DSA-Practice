@@ -8,11 +8,11 @@ public:
         ListNode(int x, ListNode *next) : val(x), next(next) {}
      };
      
-    ListNode* reverseList(ListNode* head, ListNode* head2) {
+    ListNode* reverseList(ListNode* head, ListNode* tail) {
         ListNode* prev = nullptr;
         ListNode* curr = head;
 
-        while (curr != head2) {
+        while (curr != tail) {
             ListNode* next = curr->next; 
             curr->next = prev;           
             prev = curr;                 
